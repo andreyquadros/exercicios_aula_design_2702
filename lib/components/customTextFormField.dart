@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 
 class customTextFormField extends StatelessWidget {
   final String campo;
-  const customTextFormField({Key? key, required this.campo}) : super(key: key);
+  final TextEditingController customController;
+  const customTextFormField({Key? key, required this.campo, required this.customController}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: customController,
       decoration: InputDecoration(
         fillColor: Colors.white,
-        labelText: 'Seu $campo',
-        hintText: 'Digite seu $campo',
+        labelText: '$campo',
+        hintText: '$campo',
         // A borda padrão do TextFormField já é um UnderlineInputBorder,
         // mas você pode personalizá-la como quiser:
         border: UnderlineInputBorder(

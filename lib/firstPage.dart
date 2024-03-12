@@ -1,5 +1,6 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_exercicios/appRoutes.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({Key? key}) : super(key: key);
@@ -9,6 +10,15 @@ class FirstPage extends StatefulWidget {
 }
 
 class _FirstPageState extends State<FirstPage> {
+
+  int valorClicado = 0;
+
+  void updateOnClick(){
+    setState(() {
+      valorClicado++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +46,7 @@ class _FirstPageState extends State<FirstPage> {
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(32, 0, 32, 16),
-            child: Text('0',
+            child: Text('$valorClicado',
               style: TextStyle(
                 fontSize: 50,
                 fontWeight: FontWeight.bold
@@ -53,7 +63,7 @@ class _FirstPageState extends State<FirstPage> {
                 ),
               ),
               Center(
-                child: FloatingActionButton(onPressed: null,
+                child: FloatingActionButton(onPressed: updateOnClick,
                 backgroundColor: FlexColor.blueLightPrimary,
                   elevation: 15,
                   child: Icon(

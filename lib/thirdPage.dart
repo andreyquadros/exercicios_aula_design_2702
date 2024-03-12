@@ -3,14 +3,14 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart'; // Se necessário, ajuste conforme a configuração do seu projeto
 
-class thirdPage extends StatefulWidget {
-  const thirdPage({Key? key}) : super(key: key);
+class ThirdPage extends StatefulWidget {
+  const ThirdPage({Key? key}) : super(key: key);
 
   @override
-  State<thirdPage> createState() => _ThirdPageState();
+  State<ThirdPage> createState() => _ThirdPageState();
 }
 
-class _ThirdPageState extends State<thirdPage> {
+class _ThirdPageState extends State<ThirdPage> {
 
   String urlImage = 'https://picsum.photos/id/237/600/1000';
 
